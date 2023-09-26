@@ -1,8 +1,8 @@
 // USER VARIABLES SECTION
 
 $accent: orange // Accent Color
-$fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
+$fontsize: 18px // Body Font Size
+$textcolor: #000 // Text Color
 $lineheight: 1.65 // Document Line Height
 $userfont: roboto-oh5, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
@@ -15,9 +15,9 @@ $gutter: $grid-gutter-width
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+//@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
-
+@import "node_modules/intl-tel-input/src/css/intlTelInput.scss"
 // FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl)
@@ -56,3 +56,10 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+
+.iti__flag
+	background-image: url("../images/src/flags.png")
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+	.iti__flag
+		background-image: url("../images/src/flags@2x.png") !important
